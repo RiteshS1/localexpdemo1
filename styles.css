@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400;1,600;1,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+    color: #ffff;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+        
+}
+*::selection {
+    background-color: #ef0000;
+    color: yellow;
+  }
+  
+  body::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+    background: #95c11e;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  
+    border-radius: 50px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+#cursor{
+    height: 25px;
+    width: 25px;
+    background-color: yellow;
+    z-index: 99;
+    position: fixed;
+    border-radius: 50%;
+    transition: all linear 0.1s;
+    
+
+}
+#cursor-blur{
+    height:300px;
+    width: 300px;
+    background-color: rgb(219, 232, 108);
+    filter: blur(110px);
+    position: fixed;
+    border-radius: 50%;
+    z-index: 9;
+    transition: all linear 0.5s;
+
+
+}
+
+#nav{
+   
+    padding: 0 100px;
+    height: 145px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    gap: 35px;
+    position:fixed;
+    
+    z-index: 99;
+    
+
+}
+#nav img{
+    height: 75px;
+
+}
+
+
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position:fixed;
+    z-index: -1;
+    
+
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.365);
+  
+
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+ 
+}
+
+#page1 h1{
+    font-size: 70px;
+    font-weight: 850;
+    position: relative;
+
+}
+
+#page1 h1::before{
+    content: "PREMIUM.DOORSTEP.SERVICES";
+    position:absolute;
+    color:#000;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke:2px yellow;
+    z-index: -1;
+}
+
+#page1 h2{
+    font-size: 24px;
+    font-weight:800;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#page1 p{
+    font-size: 18px;
+    font-weight: 400;
+    width: 45%;
+}
+
+#page1 #arrow {
+    height: 200px;
+    width: 200px;
+    background-color: transparent;
+    border: 5px solid yellow;
+    position: absolute;
+    display: flex;
+    left: -3%;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 80%;
+    
+    transition: all ease 0.5s;
+  }
+  #page1 #arrow i {
+    font-size: 50px;
+    
+    font-weight: 100;
+  }
+  #page1 #arrow:hover {
+    scale: 0.5;
+    transition: all ease 0.5s;
+    background-color: yellow;
+  }
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller{
+    /* background-color:#f88c19; */
+    margin-top: 50px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 10;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll;
+    
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+#scroller h4{
+    display: inline-block;
+    white-space: nowrap;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 80px;
+    font-style: bold;
+    font-weight: 900;
+    transition: all linear 0.5s;
+    margin-right: 10px;
+    color: #000;
+    -webkit-text-stroke: 2px yellow;
+}
+#scroller h4:hover{
+    color: yellow;
+
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+#about-us{
+    margin-top: 110px;
+    height: 40vh;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+ 
+}
+
+#about-us img{
+    height: 160px;
+    width: 140px;
+    border-radius: 20px;
+    object-fit: cover;
+    
+}
+
+#about-us-in{
+    width: 60%;
+    text-align: center;
+    
+
+}
+#about-us-in h3{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 40px;
+
+}
+#about-us-in p{
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 30px;
+}
+
+
+#cards-container{
+    height:90vh;
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 10;
+    margin-top: 70px;
+    
+}
+
+.cards{
+    /* background-color: blue; */
+    height: 80%;
+    width: 23%;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    transition: all ease 0.5s;
+
+}
+
+#card1{
+    background-image: url(https://img.freepik.com/free-photo/photovoltaic-solar-power-panel-field-green-clean-alternative-power-energy-concept-ai-generative_123827-23424.jpg);
+}
+#card2{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxaFVDjkp5cjbVeWc7EFmj89Gv5fTUKRM3fQ&usqp=CAU);
+}
+
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.cards:hover{
+    transform: rotate3d(-2,2,0,20deg);
+}
+
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    padding: 25px;
+    padding-top: 150px;
+    opacity: 0;
+    transition: all ease 0.5s;
+    
+}
+.overlay h2{
+    font-size: 26px;
+    font-weight: 900;
+    color: #000;
+   
+    
+}
+.overlay p{
+    color: #000;
+}
+.overlay:hover{
+    opacity: 100%;
+}
+
+#green-div{
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(to left bottom ,#119f3a, #ace022);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#green-div img{
+    height: 100%;
+    object-fit: cover;
+    width: 15%;
+}
+
+#green-div h4{
+    font-weight: 800;
+    font-size: 22px;
+    width: 50%;
+    color: #000;
+    text-align: center;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+  }
+  #page3  p {
+    font-size: 25px;
+    font-weight: 700;
+    width: 60%;
+    line-height: 45px;
+    text-align: center;
+  }
+  
+  #page3 img {
+    position: absolute;
+    height: 60px;
+  }
+  #page3 #colon1 {
+    left: 15%;
+    top: 25%;
+  }
+  #page3 #colon2 {
+    bottom: 30%;
+    right: 15%;
+  }
+
+#page4 {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+  }
+  .elem {
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .elem h2 {
+    height: 100%;
+    width: 100%;
+    background-color: yellow;
+    display: flex;
+    color: #000;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    font-size: 2vw;
+    position: absolute;
+    z-index: 10;
+  }
+  .elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease 0.5s;
+    scale: 1.1;
+  }
+  .elem:hover h2 {
+    color: #fff;
+    background-color: transparent;
+  }
+  .elem:hover img {
+    scale: 1;
+  }
+  #page4 h1 {
+    font-size: 75px;
+    position: absolute;
+    top: -15%;
+    font-weight: 900;
+    font-family: gilroy;
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+  }
+  #footer {
+    height: 35vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+  }
+  #footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+  }
+  #f1 img {
+    height: 100px;
+  }
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+  }
+  #f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  
+  #f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  #f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  
